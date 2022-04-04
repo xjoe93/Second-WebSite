@@ -501,6 +501,62 @@ a {
     color: #000;
 }
 
+@media screen and (min-width: 300px) and (max-width: 450px) {
+    .section-3 {
+        background: url(./imgs/burger-bg.png) center/cover no-repeat;
+        height: 400px;
+    }
+    
+    .section-3 .container {
+        text-align: center;
+        padding: 6rem 0;
+        text-transform: capitalize;
+    }
+    
+    .section-3 .container h1 {
+        color: #fff;
+        font-size: 2.2rem;
+        letter-spacing: 0.3px;
+    }
+    
+    .section-3 .container p {
+        color: #fff;
+        margin: 0.8rem 0 2rem 0;
+        font-size: 0.9rem;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    
+    
+    .section-3 .container form #email {
+        border: 1px solid rgba(87, 87, 87, 0.412);
+        outline: none;
+        width: 260px;
+        height: 45px;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.494);
+        color: var(--main-color);
+        padding-left: 1rem;
+    }
+    
+    .section-3 .container form #sign-up {
+        width: 80px;
+        height: 43px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--S5-bg);
+        margin-left: -5rem;
+        cursor: pointer;
+    }
+    
+    .section-3 .container form #sign-up:hover {
+        color: #000;
+    }
+}
+
 /* ================================ End Section-3 Style ================================ */
 
 
@@ -610,6 +666,7 @@ a {
 
 
 /* ================================ Start Footer ================================ */
+
 footer {
     background: var(--main-color);
     padding: 1rem 0;
@@ -624,5 +681,6 @@ footer .container {
 footer .container a {
     color: blue;
 }
+
 /* ================================ End Footer ================================ */
 

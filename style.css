@@ -1,0 +1,628 @@
+/* ================================ Global Style ================================ */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #dd4b2b;
+    --S2-bg: #edeff1;
+    --S5-bg: #d75d0e;
+    --sign-btn: #4b4e73;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ================================ Global Style ================================ */
+
+
+
+/* ================================ Start Header Style ================================ */
+
+@media screen and (min-width: 350px) and (max-width: 1199px) {
+
+    nav {
+        background-color: var(--S2-bg);
+    }
+
+    nav .container {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: capitalize;
+        padding: 1rem 0;
+        width: 89%;
+    }
+
+    nav .container .logo h1 {
+        color: #000;
+        font-size: 1.7rem;
+    }
+
+    nav .container .logo p {
+        color: var(--main-color);
+        font-weight: 500;
+    }
+
+    .links .burger-icon span {
+        width: 45px;
+        height: 5px;
+        display: flex;
+        background-color: var(--main-color);
+        margin-bottom: 4px;
+    }
+
+    .links {
+        position: relative;
+    }
+
+    .links ul {
+        list-style: none;
+        display: none;
+        position: absolute;
+        background-color: var(--S2-bg);
+        right: 0;
+        top: calc(100% + 15px);
+        width: 150px;
+        text-align: center;
+        border: 1px solid var(--main-color);
+        z-index: 1;
+    }
+    
+    .links:hover ul {
+        display: block;
+    }
+
+    .links ul::before {
+        content: "";
+        border-width: 15px;
+        border-style: solid;
+        border-color: transparent transparent var(--main-color) transparent;
+        position: absolute;
+        right: 0px;
+        top: -30px;
+    }
+
+    .links ul li a {
+        margin: 1.5rem 0;
+        display: block;
+        color: var(--main-color);
+        transition: all 0.3s;
+        font-weight: 400;
+    }
+
+    .links ul li a:hover {
+        color: #000;
+        padding-left: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px)  {
+    nav {
+        background-color: var(--S2-bg);
+    }
+
+    nav .container {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: capitalize;
+        padding: 1rem 0;
+    }
+
+    nav .container .logo h1 {
+        color: #000;
+        font-size: 1.7rem;
+    }
+
+    nav .container .logo p {
+        color: var(--main-color);
+        font-weight: 500;
+    }
+
+    nav .container ul {
+        list-style: none;
+    }
+
+    nav .container ul li {
+        display: inline-block;
+    }
+
+    nav .container ul li a {
+        color: #222222;
+        font-weight: 500;
+        margin-right: 2.3rem;
+    }
+
+    nav .container ul li a:hover {
+        color: var(--main-color);
+    }
+
+    nav .container ul li #active {
+        background-color: var(--main-color);
+        color: #fff;
+        padding: 0.7rem 1rem;
+        border-radius: 25px;
+    }
+
+    nav .container ul li #active:hover {
+        color: #000;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 600px) {
+    .hero {
+        background-image: url(./imgs/hero-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 1600px;
+    }
+    
+    .hero .container {
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 0 10px #000;
+        text-transform: capitalize;
+    }
+    
+    .hero-headings {    
+        padding: 8rem 0 3rem 0 ;
+    }
+    
+    .hero-headings h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-headings p {
+        font-size: 1.2rem;
+    }
+    
+    .hero-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        height: 450px;
+        align-items: center;
+    }
+
+    .hero-features .col {
+        margin-bottom: 3rem;
+    }
+
+    .hero-features h1 {
+        margin: 1rem 0;
+    }
+    
+    .hero-features p {
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+    }
+    
+    #hero-btn {
+        background-color: #fff;
+        padding: 1rem 3rem;
+        border-radius: 25px;
+        text-shadow: none;
+        font-weight: 500;
+        display: inline-block;
+        margin-top: 39rem;
+        color: #000;
+    }
+    
+    #hero-btn:hover {
+        color: var(--main-color);
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+    .hero {
+        background-image: url(./imgs/hero-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 1500px;
+    }
+    
+    .hero .container {
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 0 10px #000;
+        text-transform: capitalize;
+        height: 100%;
+    }
+    
+    .hero-headings {    
+        padding: 8rem 0 3rem 0 ;
+    }
+    
+    .hero-headings h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-headings p {
+        font-size: 1.2rem;
+    }
+    
+    .hero-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        height: 60%;
+        align-items: center;
+        margin: 2rem 0;
+    }
+
+    .hero-features .col {
+        margin-bottom: 3rem;
+    }
+
+    .hero-features h1 {
+        margin: 1rem 0;
+    }
+    
+    .hero-features p {
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+    }
+    
+    #hero-btn {
+        background-color: #fff;
+        padding: 1rem 3rem;
+        border-radius: 25px;
+        text-shadow: none;
+        font-weight: 500;
+        display: inline-block;
+        margin-top: 4rem;
+        color: #000;
+    }
+    
+    #hero-btn:hover {
+        color: var(--main-color);
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .hero {
+        background-image: url(./imgs/hero-bg.png);
+        background-repeat: no-repeat;
+        background-position: 0 45%;
+        background-size: cover;
+        background-attachment: fixed;
+        height: calc(100vh - 89px);
+    }
+    
+    .hero .container {
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 0 10px #000;
+        text-transform: capitalize;
+        height: 100%;
+    }
+    
+    .hero-headings {    
+        padding: 8rem 0 3rem 0 ;
+    }
+    
+    .hero-headings h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-headings p {
+        font-size: 1.2rem;
+    }
+    
+    .hero-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        height: 49%;
+        align-items: center;
+    }
+    
+    .hero-features h1 {
+        margin: 1rem 0;
+    }
+    
+    .hero-features p {
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+    }
+    
+    #hero-btn {
+        background-color: #fff;
+        padding: 1rem 3rem;
+        border-radius: 25px;
+        text-shadow: none;
+        font-weight: 500;
+        display: inline-block;
+        margin-top: 1rem;
+        color: #000;
+    }
+    
+    #hero-btn:hover {
+        color: var(--main-color);
+    }
+}
+
+/* ================================ End Header Style ================================ */
+
+
+
+/* ================================ Start News-Section Style ================================ */
+
+.news {
+    background-color: var(--S2-bg);
+}
+
+.news .container {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.news .container h1 {
+    font-size: 1.8rem;
+    padding: 4rem 0 0 0;
+}
+
+.news-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+.n-col {
+    margin-bottom: 2rem;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.178);
+    border-radius: 25px;
+}
+
+.n-col img {
+    display: inline-block;
+    margin-bottom: -40px;
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.n-col h1 {
+    margin-bottom: 1.5rem;
+}
+
+.n-col p {
+    color: rgb(121, 121, 121);
+    line-height: 1.5;
+}
+
+.n-col a {
+    margin: 2rem 0;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-radius: 25px;
+    color: rgb(155, 155, 155);
+}
+
+.n-col a:hover {
+    color: var(--main-color);
+}
+
+/* ================================ End News-Section Style ================================ */
+
+
+
+/* ================================ Start Section-3 Style ================================ */
+
+.section-3 {
+    background: url(./imgs/burger-bg.png) center/cover no-repeat;
+    height: 400px;
+}
+
+.section-3 .container {
+    text-align: center;
+    padding: 6rem 0;
+    text-transform: capitalize;
+}
+
+.section-3 .container h1 {
+    color: #fff;
+    font-size: 2.2rem;
+    letter-spacing: 0.3px;
+}
+
+.section-3 .container p {
+    color: #fff;
+    margin: 0.8rem 0 2rem 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+.section-3 .container form #email {
+    border: 1px solid rgba(87, 87, 87, 0.412);
+    outline: none;
+    width: 300px;
+    height: 45px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.494);
+    color: var(--main-color);
+    padding-left: 1rem;
+}
+
+.section-3 .container form #sign-up {
+    width: 150px;
+    height: 43px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--S5-bg);
+    margin-left: -5rem;
+    cursor: pointer;
+}
+
+.section-3 .container form #sign-up:hover {
+    color: #000;
+}
+
+/* ================================ End Section-3 Style ================================ */
+
+
+
+/* ================================ Start Order-Now Style ================================ */
+
+.order-now .container .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 6rem 0;
+}
+
+.pic-menu img {
+    width: 580px;
+    border-radius: 25px;
+}
+
+.text-menu {
+    align-self: center;
+}
+
+.text-menu h1 {
+    font-size: 2.5rem;
+}
+
+.text-menu h1 span {
+    color: #d75d0e;
+}
+
+.text-menu p {
+    margin: 1rem 0;
+    color: rgb(148, 148, 148);
+    font-weight: 350;
+    line-height: 1.7;
+}
+
+.menu button {
+    padding: 0.95rem 3rem;
+    border-radius: 25px;
+    background-color: #d75d0e;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+
+.menu button:hover {
+    color: #000;
+}
+
+@media screen and (min-width: 300px) and (max-width: 1000px) {
+    .order-now .container .menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 6rem 0;
+        text-align: center;
+    }
+    
+    .pic-menu img {
+        width: 100%;
+        border-radius: 25px;
+    }
+    
+    .text-menu {
+        align-self: center;
+    }
+    
+    .text-menu h1 {
+        font-size: 2.5rem;
+    }
+    
+    .text-menu h1 span {
+        color: #d75d0e;
+    }
+    
+    .text-menu p {
+        margin: 1rem 0;
+        color: rgb(148, 148, 148);
+        font-weight: 350;
+        line-height: 1.7;
+    }
+    
+    .menu button {
+        padding: 0.95rem 3rem;
+        border-radius: 25px;
+        background-color: #d75d0e;
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.1rem;
+        border: none;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+    
+    
+    .menu button:hover {
+        color: #000;
+    }
+}
+
+/* ================================ End Order-Now Style ================================ */
+
+
+
+/* ================================ Start Footer ================================ */
+footer {
+    background: var(--main-color);
+    padding: 1rem 0;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+footer .container {
+    text-align: center;
+}
+
+footer .container a {
+    color: blue;
+}
+/* ================================ End Footer ================================ */
+
